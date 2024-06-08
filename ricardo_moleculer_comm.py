@@ -1,3 +1,4 @@
+# source myenv/bin/activate tem que rodar isso antes pq o pacote nao foi instalado com apt pois é externo. entao fica ambiente virtual.
 import pandas as pd
 import matplotlib.pyplot as plt
 import os   # for file management
