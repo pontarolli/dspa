@@ -50,19 +50,17 @@ deactivate
 ```
  
 ## Graphs
-Latency Histogram  
-![Latency](./experiments/2024-06-07/Figure_1.svg)  
 
-Frequency Histogram  
-![Frequency](./experiments/2024-06-07/Figure_2.svg)  
+![](./experiments/2024-06-19/2024-06-19-1449.txt-point.svg)  
 
-Boxplot  
-![Boxplot](./experiments/2024-06-07/Figure_3.svg)  
+ 
+![](./experiments/2024-06-19/2024-06-19-1449.txt-hist.svg)  
 
-## Tables ?
-Latency Histogram  
-Frequency Histrogram  
-Boxplot  
+ 
+![](./experiments/2024-06-19/2024-06-19-1449.txt-boxplot.svg)  
+
+## Samples (Raw format)
+[raw](./experiments/2024-06-19/2024-06-19-1449.txt.xlsx)
 
 ## Conclusion
 Article

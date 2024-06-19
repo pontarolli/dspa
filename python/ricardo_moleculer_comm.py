@@ -39,7 +39,10 @@ print("Lettura file, ", filename)
 
 column_name_timestamp=['t1','t3','t5','t6','t7','t8','t9','t11']
 columns_sniffer=['t2','t4','t10','t12']
-column_name_data=['L12','L23','L34','L45','L56','L67','L78','L89','L910','L1011','L1112','L13','L35','L911','L17','L711']
+column_name_data=['$L_{1;2}$','$L_{2;3}$','$L_{3;4}$','$L_{4;5}$',
+                  '$L_{5;6}$','$L_{6;7}$','$L_{7;8}$','$L_{8;9}$',
+                  '$L_{9;10}$','$L_{10;11}$','$L_{11;12}$','$L_{1;3}$',
+                  '$L_{3;5}$','$L_{9;11}$','$L_{1;7}$','$L_{7;11}$']
 
 #read and modify file
 with open(filename, 'r') as f:
@@ -178,22 +181,22 @@ print("Elaborazione dati")
 
 latency = pd.DataFrame(columns=column_name_data)
 
-latency['L12'] = timestamp['t2']-timestamp['t1']
-latency['L23'] = timestamp['t3']-timestamp['t2']
-latency['L34'] = timestamp['t4']-timestamp['t3']
-latency['L45'] = timestamp['t5']-timestamp['t4']
-latency['L56'] = timestamp['t6']-timestamp['t5']
-latency['L67'] = timestamp['t7']-timestamp['t6']
-latency['L78'] = timestamp['t8']-timestamp['t7']
-latency['L89'] = timestamp['t9']-timestamp['t8']
-latency['L910'] = timestamp['t10']-timestamp['t9']
-latency['L1011'] = timestamp['t11']-timestamp['t10']
-latency['L1112'] = timestamp['t12']-timestamp['t11']
-latency['L13'] = timestamp['t3']-timestamp['t1']
-latency['L35'] = timestamp['t5']-timestamp['t3']
-latency['L911'] = timestamp['t11']-timestamp['t9']
-latency['L17'] = timestamp['t7']-timestamp['t1']
-latency['L711'] = timestamp['t11']-timestamp['t7']
+latency[column_name_data[0]] = timestamp['t2']-timestamp['t1']
+latency[column_name_data[1]] = timestamp['t3']-timestamp['t2']
+latency[column_name_data[2]] = timestamp['t4']-timestamp['t3']
+latency[column_name_data[3]] = timestamp['t5']-timestamp['t4']
+latency[column_name_data[4]] = timestamp['t6']-timestamp['t5']
+latency[column_name_data[5]] = timestamp['t7']-timestamp['t6']
+latency[column_name_data[6]] = timestamp['t8']-timestamp['t7']
+latency[column_name_data[7]] = timestamp['t9']-timestamp['t8']
+latency[column_name_data[8]] = timestamp['t10']-timestamp['t9']
+latency[column_name_data[9]] = timestamp['t11']-timestamp['t10']
+latency[column_name_data[10]] = timestamp['t12']-timestamp['t11']
+latency[column_name_data[11]] = timestamp['t3']-timestamp['t1']
+latency[column_name_data[12]] = timestamp['t5']-timestamp['t3']
+latency[column_name_data[13]] = timestamp['t11']-timestamp['t9']
+latency[column_name_data[14]] = timestamp['t7']-timestamp['t1']
+latency[column_name_data[15]] = timestamp['t11']-timestamp['t7']
 
 
 print(latency)
@@ -216,46 +219,61 @@ with pd.ExcelWriter(excel_file) as writer:
 print("Plotting ... CNTRL+C to stop")
 
 #plot parameters
-plt.rcParams.update({'font.size': 12})
-plt.rcParams["font.weight"] = "bold"
+plt.rcParams.update({'font.size': 10})
+#plt.rcParams["font.weight"] = "bold"
 plt.rcParams["axes.labelweight"] = "bold"
+plt.rcParams["font.family"] = "Times New Roman"
 transparency=0.8
-marker_size=10
+marker_size=5
 number_of_bins=10
 
 
 #plot latency
 
 #change figure size
-
-
+column=4
+row=4
+cont=0
 #SUBPLOT
-fig, subplot = plt.subplots(5, 2,figsize=(7,10), layout="constrained")
-for i in range(5):
-    for j in range(2):
-        if i*2+j < len(column_name_data):
-            subplot[i,j].plot(latency[column_name_data[i*2+j]], label=column_name_data[i*2+j], marker='o', markersize=marker_size, alpha=transparency)
-            subplot[i,j].set_title(column_name_data[i*2+j])
-            subplot[i,j].set_xlabel('sample')
-            subplot[i,j].set_ylabel('latency (ms)')
+fig, subplot = plt.subplots(row, column,figsize=(14,10), layout="constrained")
+for i in range(row):
+    for j in range(column):
+        if cont < len(column_name_data):
+            subplot[i,j].plot(latency[column_name_data[cont]], label=column_name_data[cont], marker='o', markersize=marker_size, alpha=transparency)
+            subplot[i,j].set_title(column_name_data[cont])
+            subplot[i,j].set_xlabel(' ')
+            subplot[i,j].set_ylabel(' ')
+        cont=cont+1 
+        
+fig.text(0.5, 0.01, 'Samples', ha='center', fontsize=12)
+fig.text(0.01, 0.5, 'Latency (ms)', va='center', rotation='vertical', fontsize=12)
 
 #HISTOGRAM
-fig, subplot = plt.subplots(5, 2,figsize=(7,10), layout="constrained")
-for i in range(5):
-    for j in range(2):
-        if i*2+j < len(column_name_data):
-            subplot[i,j].hist(latency[column_name_data[i*2+j]], bins=number_of_bins, alpha=transparency)
-            subplot[i,j].set_title(column_name_data[i*2+j])
-            subplot[i,j].set_xlabel('latency (ms)')
-            subplot[i,j].set_ylabel('frequency')
+cont=0
+fig, subplot = plt.subplots(row, column,figsize=(14,10), layout="constrained")
+for i in range(row):
+    for j in range(column):
+        if cont < len(column_name_data):
+            subplot[i,j].hist(latency[column_name_data[cont]], bins=number_of_bins, alpha=transparency)
+            subplot[i,j].set_title(column_name_data[cont])
+            subplot[i,j].set_xlabel(' ')
+            subplot[i,j].set_ylabel(' ')
+        cont=cont+1
+fig.text(0.5, 0.01, 'Latency (ms)', ha='center', fontsize=12)
+fig.text(0.01, 0.5, 'Frequency', va='center', rotation='vertical', fontsize=12)
 
 #BOXPLOT
-fig, subplot = plt.subplots(5, 2,figsize=(7,10), layout="constrained")
-for i in range(5):
-    for j in range(2):
-        if i*2+j < len(column_name_data):
-            subplot[i,j].boxplot(latency[column_name_data[i*2+j]])
-            subplot[i,j].set_title(column_name_data[i*2+j])
-            subplot[i,j].set_ylabel('latency (ms)')
+cont=0
+fig, subplot = plt.subplots(row, column,figsize=(14,10), layout="constrained")
+for i in range(row):
+    for j in range(column):
+        if cont < len(column_name_data):
+            subplot[i,j].boxplot(latency[column_name_data[cont]])
+            subplot[i,j].set_xticklabels([column_name_data[cont]])
+            #subplot[i,j].set_xlabel(column_name_data[cont])
+            subplot[i,j].set_ylabel(' ')
+        cont=cont+1
 
+fig.text(0.01, 0.5, 'Latency (ms)', va='center', rotation='vertical', fontsize=12)
+fig.text(0.5, 0.01, 'Experiments', va='center', fontsize=12)
 plt.show()
