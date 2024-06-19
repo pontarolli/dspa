@@ -59,6 +59,11 @@ Frequency Histogram
 Boxplot  
 ![Boxplot](./experiments/2024-06-07/Figure_3.svg)  
 
+## Tables ?
+Latency Histogram  
+Frequency Histrogram  
+Boxplot  
+
 ## Conclusion
 Article
 
