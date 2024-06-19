@@ -50,14 +50,14 @@ deactivate
 ```
  
 ## Graphs
-latency Histogram
-![Latency](./experiments/2024-06-07/Figure_1.svg)
+Latency Histogram  
+![Latency](./experiments/2024-06-07/Figure_1.svg)  
 
-Frequency Histogram
-![Frequency](./experiments/2024-06-07/Figure_2.svg)
+Frequency Histogram  
+![Frequency](./experiments/2024-06-07/Figure_2.svg)  
 
-Boxplot
-![Boxplot](./experiments/2024-06-07/Figure_3.svg)
+Boxplot  
+![Boxplot](./experiments/2024-06-07/Figure_3.svg)  
 
 ## Conclusion
 Article
