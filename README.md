@@ -48,7 +48,7 @@ python ricardo_moleculer_comm.py
 # Disable the virtual environment
 deactivate
 ```
-
+ 
 ## Graphs
 latency Histogram
 ![Latency](./experiments/2024-06-07/Figure_1.svg)
