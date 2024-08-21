@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  api:
+    image: gasiepgodoy/moleculer:api-v1.0.8
+    container_name: api-v1.0.8
+    ports:
+      - "3000:3000"   # Porta para conexões de cliente
+    restart: always
+    environment:
+      - TRANSPORTER_URL=nats://host.docker.internal:4222
+      - API_PORT=3000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
