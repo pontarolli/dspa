@@ -6,10 +6,10 @@ Initially a bench test was done before going directly to the manufacturing plant
 
  
 ## Deploy diagram
-![Deploy diagram](diagrams\deploy\deploy-diagram.svg)
+![Deploy diagram](diagrams/deploy/deploy-diagram.svg)
 
 ## Sequence diagram
-![Sequence diagram](diagrams\sequence\sequence-diagram.svg)
+![Sequence diagram](diagrams/sequence/sequence-diagram.svg)
 
 ## PLC Siemens 
 [Program](./siemens/program.txt)
