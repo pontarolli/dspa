@@ -231,8 +231,8 @@ number_of_bins=10
 #plot latency
 
 #change figure size
-column=4
-row=4
+column=2
+row=5
 cont=0
 #SUBPLOT
 fig, subplot = plt.subplots(row, column,figsize=(14,10), layout="constrained")
