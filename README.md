@@ -64,13 +64,12 @@ deactivate
  
 ## Graphs
 
-![](./experiments/2024-06-19/2024-06-19-1449.txt-point.svg)  
-
- 
-![](./experiments/2024-06-19/2024-06-19-1449.txt-hist.svg)  
-
- 
-![](./experiments/2024-06-19/2024-06-19-1449.txt-boxplot.svg)  
+### Plot
+![Figure-1](./experiments/2024-07-31/2024-07-31-09-27-Figure-1.svg) 
+### Histogram
+![Figure-2](./experiments/2024-07-31/2024-07-31-09-27-Figure-2.svg)  
+### Box Plot
+![FIgure-3](./experiments/2024-07-31/2024-07-31-09-27-Figure-3.svg)  
 
 ## Samples (Raw format)
 [raw](./experiments/2024-06-19/2024-06-19-1449.txt.xlsx)

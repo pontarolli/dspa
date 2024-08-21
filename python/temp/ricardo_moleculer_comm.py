@@ -22,12 +22,23 @@ from scapy.utils import *           #for pcap file
 
 
 
-################## GLOBAL VARIABLE
-#file name
-filename = '2024-07-31-10-42-real.txt'
-filename_mod = filename+'_mod.txt'
-excel_file = filename+'.xlsx'
-pcap_file = '2024-07-31-10-42-real.pcap'
+# ################## GLOBAL VARIABLE
+# #file name
+# filename = '/home/usr/dspa/experiments/2024-07-31/2024-07-31-10-08-real.txt'
+# filename_mod = filename+'_mod.txt'
+# excel_file = filename+'.xlsx'
+# pcap_file = '/home/usr/dspa/experiments/2024-07-31/2024-07-31-10-08-real.pcap'
+
+# Base path
+base_path = '/home/usr/dspa/experiments/2024-07-31/2024-07-31-09-27-real'
+
+# Constructed file paths
+filename = f'{base_path}.txt'
+filename_mod = f'{base_path}_mod.txt'
+excel_file = f'{base_path}.xlsx'
+pcap_file = f'{base_path}.pcap'
+
+
 
 #device mac address
 gw_mac='00:00:00:00:00:00'
@@ -39,10 +50,15 @@ print("Lettura file, ", filename)
 
 column_name_timestamp=['t1','t3','t5','t6','t7','t8','t9','t11']
 columns_sniffer=['t2','t4','t10','t12']
-column_name_data=['$L_{1;2}$','$L_{2;3}$','$L_{3;4}$','$L_{4;5}$',
+# column_name_data=['$L_{1;2}$','$L_{2;3}$','$L_{3;4}$','$L_{4;5}$',
+#                   '$L_{5;6}$','$L_{6;7}$','$L_{7;8}$','$L_{8;9}$',
+#                   '$L_{9;10}$','$L_{10;11}$','$L_{11;12}$','$L_{1;3}$',
+#                   '$L_{3;5}$','$L_{9;11}$','$L_{1;7}$','$L_{7;11}$']
+
+column_name_data=['$L_{1;2}$','$L_{2;4}$','$L_{4;5}$',
                   '$L_{5;6}$','$L_{6;7}$','$L_{7;8}$','$L_{8;9}$',
-                  '$L_{9;10}$','$L_{10;11}$','$L_{11;12}$','$L_{1;3}$',
-                  '$L_{3;5}$','$L_{9;11}$','$L_{1;7}$','$L_{7;11}$']
+                  '$L_{9;10}$','$L_{10;12}$',
+                  '$L_{1;7}$']
 
 #read and modify file
 with open(filename, 'r') as f:
@@ -181,22 +197,20 @@ print("Elaborazione dati")
 
 latency = pd.DataFrame(columns=column_name_data)
 
-latency[column_name_data[0]] = timestamp['t2']-timestamp['t1']
-latency[column_name_data[1]] = timestamp['t3']-timestamp['t2']
-latency[column_name_data[2]] = timestamp['t4']-timestamp['t3']
-latency[column_name_data[3]] = timestamp['t5']-timestamp['t4']
-latency[column_name_data[4]] = timestamp['t6']-timestamp['t5']
-latency[column_name_data[5]] = timestamp['t7']-timestamp['t6']
-latency[column_name_data[6]] = timestamp['t8']-timestamp['t7']
-latency[column_name_data[7]] = timestamp['t9']-timestamp['t8']
-latency[column_name_data[8]] = timestamp['t10']-timestamp['t9']
-latency[column_name_data[9]] = timestamp['t11']-timestamp['t10']
-latency[column_name_data[10]] = timestamp['t12']-timestamp['t11']
-latency[column_name_data[11]] = timestamp['t3']-timestamp['t1']
-latency[column_name_data[12]] = timestamp['t5']-timestamp['t3']
-latency[column_name_data[13]] = timestamp['t11']-timestamp['t9']
-latency[column_name_data[14]] = timestamp['t7']-timestamp['t1']
-latency[column_name_data[15]] = timestamp['t11']-timestamp['t7']
+latency[column_name_data[0]] = timestamp['t2']-timestamp['t1'] # At21    (1)
+                                                               # min     (2) 
+latency[column_name_data[1]] = timestamp['t4']-timestamp['t2'] 
+                                        # t4  -(t2 + min (2))            (3)
+latency[column_name_data[2]] = timestamp['t5']-timestamp['t4']
+latency[column_name_data[3]] = timestamp['t6']-timestamp['t5']
+latency[column_name_data[4]] = timestamp['t7']-timestamp['t6']
+latency[column_name_data[5]] = timestamp['t8']-timestamp['t7']
+latency[column_name_data[6]] = timestamp['t9']-timestamp['t8']
+latency[column_name_data[7]] = timestamp['t10']-timestamp['t9'] # At109  (4)
+                                                                # min    (5)
+latency[column_name_data[8]] = timestamp['t12']-timestamp['t10']
+                                        # t12 -(t10 + min(5))            (6)
+latency[column_name_data[9]] = timestamp['t7']-timestamp['t1']
 
 
 print(latency)
