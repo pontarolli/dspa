@@ -22,9 +22,10 @@ Initially a bench test was done before going directly to the manufacturing plant
 The values ​​of the Timestamps, T1, T3, T5, T6, T7, T8, T9 and T11 are collected in Node-Red, PLC and services and exported via HTTP API in Node-Red, where they are saved in the [experiments](./experiments/) folder following the standard yyyy-mm-dd-hhmm.txt.
 The other Timestamps, T2, T4 and T10 are collected by Sniffer and saved with the help of Wireshark by selecting the Ethernet adapter in use, using the command for example `sudo tcpdump -i eth0 -w capture.pcap`. This data was also saved in the [experiments](./experiments/) folder following the standard yyyy-mm-dd-hhmm.pcap.
 
-[flow-1](./node-red/flow-1.png)  
-[flow-2](./node-red/flow-2.png)  
-[flow-3](./node-red/flow-3.png)  
+![flow-1](./node-red/flow-1.png)
+![flow-2](./node-red/flow-2.png)
+![flow-3](./node-red/flow-3.png)
+
 
 
 
