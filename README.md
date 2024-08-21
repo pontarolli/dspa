@@ -54,7 +54,7 @@ pip install pandas
 pip freeze > requirements.txt
 # Install dependencies from requirements.txt
 pip install -r requirements.txt
-
+ 
 # Run the Code and then save the images manually.
 python ricardo_moleculer_comm.py
 
