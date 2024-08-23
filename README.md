@@ -90,6 +90,9 @@ deactivate
 
 [raw](./experiments/2024-07-31/2024-07-31-09-27.xlsx)  
 
+### Table 1 - Statistics
+![Table-1](./experiments/2024-07-31/2024-07-31-09-27-real.png)
+
 ## Conclusion  
 
 Article  
