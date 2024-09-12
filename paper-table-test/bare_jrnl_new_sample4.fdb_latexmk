@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1726130571.55903 "h:/My Drive/unesp/doctorate/pdse/dspa/paper/bare_jrnl_new_sample4.tex" "bare_jrnl_new_sample4.pdf" "bare_jrnl_new_sample4" 1726130574.19346 0
-  "bare_jrnl_new_sample4.aux" 1726130573 4790 bf1d09e520b217280187fb904493d109 "pdflatex"
-  "bare_jrnl_new_sample4.tex" 1726130569 27359 a498ba3e3536d2fdbdf0e7fb49b9ceee ""
+["pdflatex"] 1726143410.48737 "h:/My Drive/unesp/doctorate/pdse/dspa/paper-table-test/bare_jrnl_new_sample4.tex" "bare_jrnl_new_sample4.pdf" "bare_jrnl_new_sample4" 1726143412.40626 0
+  "bare_jrnl_new_sample4.aux" 1726143412 4790 bf1d09e520b217280187fb904493d109 "pdflatex"
+  "bare_jrnl_new_sample4.tex" 1726143405 27359 a498ba3e3536d2fdbdf0e7fb49b9ceee ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1725020561 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1725020939 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1725020297 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -54,7 +54,6 @@
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1725019521 32716 08e384dc442464e7285e891af9f45947 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1725019521 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1725019521 34694 870c211f62cb72718a00e353f14f254d ""
-  "c:/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb" 1725021802 119235 05e5c8d6d60439433e50047898c2c0e0 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb" 1725020297 45758 19968a0990191524e34e1994d4a31cb6 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1725023821 44729 fea0975e20ec51c992338362f05f1146 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb" 1725023821 44656 0cbca70e0534538582128f6b54593cca ""
@@ -107,9 +106,9 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1725024501 5543950 2aa73a438b7054b2327b796fbe5f4275 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1725024771 8239378 5a56fbf7e11fd75e3cc32c8ec7c93d31 ""
   "c:/texlive/2024/texmf.cnf" 1725024473 713 e69b156964470283e0530f5060668171 ""
-  "figures/20240910_1116.pdf" 1725961529 99044 66d12c1e6cb1bb7207834219af95edb7 ""
-  "figures/20240910_1135.pdf" 1726130532 103748 6e2a7fcfab0f1e65694f502f4074af8f ""
-  "h:/My Drive/unesp/doctorate/pdse/dspa/paper/bare_jrnl_new_sample4.tex" 1726130569 27359 a498ba3e3536d2fdbdf0e7fb49b9ceee ""
+  "figures/20240910_1116.pdf" 1726135475 116125 dfa4724e81a4a31b378ba91a13c57520 ""
+  "figures/20240910_1135.pdf" 1726142822 120718 fc4e1b940ba327747a2c8441d8b77d68 ""
+  "h:/My Drive/unesp/doctorate/pdse/dspa/paper-table-test/bare_jrnl_new_sample4.tex" 1726143405 27359 a498ba3e3536d2fdbdf0e7fb49b9ceee ""
   (generated)
   "bare_jrnl_new_sample4.aux"
   "bare_jrnl_new_sample4.log"

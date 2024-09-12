@@ -1,8 +1,8 @@
-PWD h:/My Drive/unesp/doctorate/pdse/dspa/paper
+PWD h:/My Drive/unesp/doctorate/pdse/dspa/paper-plant-test
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT h:/My Drive/unesp/doctorate/pdse/dspa/paper/bare_jrnl_new_sample4.tex
+INPUT h:/My Drive/unesp/doctorate/pdse/dspa/paper-plant-test/bare_jrnl_new_sample4.tex
 OUTPUT bare_jrnl_new_sample4.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
@@ -198,6 +198,10 @@ INPUT ./figures/20240910_1135.pdf
 INPUT ./figures/20240910_1135.pdf
 INPUT ./figures/20240910_1135.pdf
 INPUT ./figures/20240910_1135.pdf
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
@@ -205,10 +209,6 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
